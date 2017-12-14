@@ -3,4 +3,10 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(Poj Parity-Game.cpp)
+set(BUILD Parity-Game)
+set(SOURCE_FILES Parity-Game.cpp)
+add_executable(${BUILD} ${SOURCE_FILES})
+
+set(BUILD Food-Chain)
+set(SOURCE_FILES Food-Chain.cpp)
+add_executable(${BUILD} ${SOURCE_FILES})
