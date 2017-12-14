@@ -3,4 +3,4 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(Poj main.cpp)
+add_executable(Poj Parity-Game.cpp)
