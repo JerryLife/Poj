@@ -19,10 +19,11 @@ Claim cs[maxn];
 // UnionFind from right to left
 // r indicates relation (0 for even, 1 for odd)
 int Find(int x) {
+    int px = p[x];
     if (x == p[x])
         return x;
-    r[x] = (r[x] + r[p[x]]) % 2;
-    p[x] = Find(p[x]);
+    p[x] = Find(px);        // p must be updated before r !!!
+    r[x] = r[x] ^ r[px];
     return p[x];
 }
 
@@ -58,10 +59,10 @@ int main() {
     }
 
     sort(f, f + cnt);       // sort the hash table
-    cnt = (int)(unique(f, f + cnt) - f);    // remove duplicate
+    int num = (int)(unique(f, f + cnt) - f);    // remove duplicate
 
     // initialize
-    for (int i = 0; i < cnt; ++i) {
+    for (int i = 0; i < num; ++i) {
         p[i] = i;
         r[i] = 0;
     }
@@ -69,8 +70,8 @@ int main() {
     int i;
     for (i = 0; i < m; ++i) {
         // find elements in hash table
-        int a = (int)(lower_bound(f, f + cnt, cs[i].u) - f);
-        int b = (int)(lower_bound(f, f + cnt, cs[i].v) - f);
+        int a = (int)(find(f, f + num, cs[i].u) - f);
+        int b = (int)(find(f, f + num, cs[i].v) - f);
 
         // check if collision
         if (Union(a, b, cs[i].w) == 0)
