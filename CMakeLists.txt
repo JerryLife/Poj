@@ -10,3 +10,7 @@ add_executable(${BUILD} ${SOURCE_FILES})
 set(BUILD Food-Chain)
 set(SOURCE_FILES Food-Chain.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
+
+set(BUILD Test)
+set(SOURCE_FILES Test.cpp)
+add_executable(${BUILD} ${SOURCE_FILES})
