@@ -1,6 +1,4 @@
-//
-// Created by HUSTW on 2017/12/14.
-//
+// 266ms, 644k
 
 #include <iostream>
 

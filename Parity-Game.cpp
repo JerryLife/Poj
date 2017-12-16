@@ -1,3 +1,5 @@
+// 47ms, 836k
+
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
