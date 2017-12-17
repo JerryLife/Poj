@@ -8,7 +8,7 @@ set(SOURCE_FILES Parity-Game.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
 
 set(BUILD Food-Chain)
-set(SOURCE_FILES Food-Chain.cpp)
+set(SOURCE_FILES Food-Chain.cpp True-Liars.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
 
 set(BUILD Test)

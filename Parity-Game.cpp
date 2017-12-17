@@ -36,7 +36,6 @@ int Union(int a, int b, int w) {
         return (r[a] ^ r[b] == w);
     }
     else {
-        // pa > pb
         r[pa] = r[a] ^ r[b] ^ w;
         p[pa] = pb;
         return 1;
