@@ -3,6 +3,10 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+set(BUILD Rochambeau)
+set(SOURCE_FILES Rochambeau.cpp)
+add_executable(${BUILD} ${SOURCE_FILES})
+
 set(BUILD Parity-Game)
 set(SOURCE_FILES Parity-Game.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})

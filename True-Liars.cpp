@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const int maxn = 1010;
+const int maxn = 650;
 
 int rel[maxn], pre[maxn];
 
