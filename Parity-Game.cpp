@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cstring>
 
-#define maxn 11111
+#define maxn 11000
 
 using namespace std;
 struct Claim {

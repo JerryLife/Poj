@@ -1,5 +1,3 @@
-// 266ms, 644k
-
 #include <iostream>
 
 using namespace std;
@@ -13,7 +11,7 @@ int find(int x) {
     else {
         int p_tmp = p[x];
         p[x] = find(p[x]);
-        r[x] = (r[x] + r[p_tmp]) % 3;   // 捕食级别关系mod 3累加
+        r[x] = (r[x] + r[p_tmp]) % 3;   // Update the relation by mod 3
         return p[x];
     }
 }
@@ -22,7 +20,7 @@ void merge(int x, int y, int d) {
     int root_x = find(x);
     int root_y = find(y);
 
-    // can be improved by 将小树接到大数上
+    // can be improved by add the small tree to the larger one
     p[root_x] = root_y;
     r[root_x] = (r[y] + d - r[x] + 3) % 3;
 }
@@ -58,21 +56,19 @@ int main() {
             continue;
         }
 
-        /*if (d == 1) {       //同类
-            if (r[x] != r[y]) {
+        if (d == 1) {       //same  group
+            if ((r[x] - r[y] + 3) % 3 != 0) {
                 wrong ++;
                 continue;
             }
         }
         else {
             // d == 2
-            if (r[y] != (r[x] + 1) % 3) {
+            if ((r[x] - r[y] + 5) % 3 != 0) {
                 wrong ++;
                 continue;
             }
-        }*/
-        if ((r[x]-r[y]+3)%3 != d-1)
-            wrong ++;
+        }
     }
 
     cout << wrong << endl;

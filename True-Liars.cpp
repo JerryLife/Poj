@@ -1,7 +1,3 @@
-//
-// Created by HUSTW on 2017/12/17.
-//
-
 #include <iostream>
 #include <cstdio>
 #include <algorithm>

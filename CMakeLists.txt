@@ -3,6 +3,10 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Apple-Tree Apple-Tree.cpp)
+
+add_executable(True-Liars True-Liars.cpp)
+
 set(BUILD Rochambeau)
 set(SOURCE_FILES Rochambeau.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
@@ -12,7 +16,7 @@ set(SOURCE_FILES Parity-Game.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
 
 set(BUILD Food-Chain)
-set(SOURCE_FILES Food-Chain.cpp True-Liars.cpp)
+set(SOURCE_FILES Food-Chain.cpp)
 add_executable(${BUILD} ${SOURCE_FILES})
 
 set(BUILD Test)
