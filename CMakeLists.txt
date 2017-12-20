@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Tunnel-Warfare Tunnel-Warfare.cpp)
+
 add_executable(MooFest MooFest.cpp)
 
 add_executable(Apple-Tree Apple-Tree.cpp)
