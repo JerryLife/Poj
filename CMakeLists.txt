@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Cows Cows.cpp)
+
 add_executable(Tunnel-Warfare Tunnel-Warfare.cpp)
 
 add_executable(MooFest MooFest.cpp)
@@ -11,18 +13,10 @@ add_executable(Apple-Tree Apple-Tree.cpp)
 
 add_executable(True-Liars True-Liars.cpp)
 
-set(BUILD Rochambeau)
-set(SOURCE_FILES Rochambeau.cpp)
-add_executable(${BUILD} ${SOURCE_FILES})
+add_executable(Rochambeau Rochambeau.cpp)
 
-set(BUILD Parity-Game)
-set(SOURCE_FILES Parity-Game.cpp)
-add_executable(${BUILD} ${SOURCE_FILES})
+add_executable(Parity-Game Parity-Game.cpp)
 
-set(BUILD Food-Chain)
-set(SOURCE_FILES Food-Chain.cpp)
-add_executable(${BUILD} ${SOURCE_FILES})
+add_executable(Food-Chain Food-Chain.cpp)
 
-set(BUILD Test)
-set(SOURCE_FILES Test.cpp)
-add_executable(${BUILD} ${SOURCE_FILES})
+add_executable(Test Test.cpp)
