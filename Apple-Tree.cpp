@@ -1,6 +1,5 @@
 //
-// Created by HUSTW on 2017/12/18.
-//
+// Part 2.1: Poj 3321
 
 #include <iostream>
 #include <cstdio>

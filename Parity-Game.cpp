@@ -1,4 +1,5 @@
 // 47ms, 836k
+// Part 1.2: Poj 1733
 
 #include <iostream>
 #include <cstdio>

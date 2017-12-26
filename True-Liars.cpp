@@ -1,3 +1,6 @@
+//
+// Part 1.3: Poj 1417
+
 #include <iostream>
 #include <cstdio>
 #include <algorithm>

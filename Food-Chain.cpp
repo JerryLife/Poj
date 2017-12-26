@@ -1,3 +1,6 @@
+//
+// Part 1.1: Poj 1182
+
 #include <iostream>
 
 using namespace std;

@@ -1,6 +1,5 @@
-//
-// Created by HUSTW on 2017/12/18.
-//
+// Use G++ instead of C++ or you will get Compile Error
+// Part 1.4: Poj 2912
 
 #include <iostream>
 #include <cstdio>
