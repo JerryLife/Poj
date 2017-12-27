@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Cashier-Employment Cashier-Employment.cpp)
+
 add_executable(Candies Candies.cpp)
 
 add_executable(Cows Cows.cpp)

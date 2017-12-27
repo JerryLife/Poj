@@ -1,5 +1,5 @@
 //
-// Part 6.1: Poj 3159
+// Part 6.2: Poj 1275
 
 #include <iostream>
 #include <cstdio>
