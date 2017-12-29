@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Layout Layout.cpp)
+
 add_executable(Intervals Intervals.cpp)
 
 add_executable(Cashier-Employment Cashier-Employment.cpp)
