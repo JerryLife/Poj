@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Count-Color Count-Color.cpp)
+
 add_executable(Layout Layout.cpp)
 
 add_executable(Intervals Intervals.cpp)
