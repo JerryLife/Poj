@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Power-Strings Power-Strings.cpp)
+
 add_executable(Housewife-Wind Housewife-Wind.cpp)
 
 add_executable(Distance-Queries Distance-Queries.cpp)

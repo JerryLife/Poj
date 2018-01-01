@@ -21,7 +21,7 @@ struct Edge {
 } edge[nmax << 1];
 
 int head[nmax];
-int cnt;
+int cnt, q, s, m[nmax][3];
 
 int query(int root, int l, int r, int ql, int qr) {
     int ans = 0;
@@ -59,7 +59,7 @@ void init() {
     num = 0;
 }
 
-void swap(int a, int b) {
+void swap(int &a, int &b) {
     int tmp = a;
     a = b;
     b = tmp;
@@ -118,15 +118,14 @@ int Find(int u, int v) {
     return ans;
 }
 
-int q, s, e[nmax][3];
 int main() {
     //freopen("input.txt", "r", stdin);
     while(~scanf("%d%d%d", &n, &q, &s)) {
         init();
         for(int i = 1; i < n; i++) {
-            scanf("%d%d%d", &e[i][0], &e[i][1], &e[i][2]);
-            int u = e[i][0];
-            int v = e[i][1];
+            scanf("%d%d%d", &m[i][0], &m[i][1], &m[i][2]);
+            int u = m[i][0];
+            int v = m[i][1];
             edge[cnt].v = v;
             edge[cnt].next = head[u];
             head[u] = cnt;
@@ -139,22 +138,21 @@ int main() {
         dfs(1, 0);
         dfs2(1, 1);
         for(int i = 1; i < n; i++) {
-            int& u = e[i][0];
-            int& v = e[i][1];
-            if(depth[u] < depth[v]) swap(u, v);
-            update(1, 1, n, p[u], e[i][2]);
+            if(depth[m[i][0]] < depth[m[i][1]]) 
+                swap(m[i][0], m[i][1]);
+            update(1, 1, n, p[m[i][0]], m[i][2]);
         }
-        int op, tmp, tmp2;
+        int op, a, b;
         for(int i = 1; i <= q; i++) {
             scanf("%d", &op);
             if(op == 0) {
-                scanf("%d", &tmp);
-                printf("%d\n", Find(s, tmp));
-                s = tmp;
+                scanf("%d", &a);
+                printf("%d\n", Find(s, a));
+                s = a;
             }
             else {
-                scanf("%d%d", &tmp, &tmp2);
-                update(1, 1, n, p[e[tmp][0]], tmp2);
+                scanf("%d%d", &a, &b);
+                update(1, 1, n, p[m[a][0]], b);
             }
         }
     }
