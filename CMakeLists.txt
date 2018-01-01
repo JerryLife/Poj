@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Housewife-Wind Housewife-Wind.cpp)
+
 add_executable(Distance-Queries Distance-Queries.cpp)
 
 add_executable(Closet-Common-Ancestors Closet-Common-Ancestors.cpp)
