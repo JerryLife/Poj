@@ -3,6 +3,8 @@ project(Poj)
 
 set(CMAKE_CXX_STANDARD 98)
 
+add_executable(Closet-Common-Ancestors Closet-Common-Ancestors.cpp)
+
 add_executable(Hotel Hotel.cpp)
 
 add_executable(Feed-The-Dogs Feed-The-Dogs.cpp)
